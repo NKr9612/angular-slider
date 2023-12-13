@@ -1,0 +1,64 @@
+.slider {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider-items {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slider-items > div {
+    flex: 0 0 100%;
+  }
+  
+  .slider-items > div.active {
+    display: block;
+  }
+  
+  .controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .controls button {
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .indicators span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #aaa; /* Kolor dla nieaktywnych kropek */
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .indicators .active-indicator {
+    background-color: blue; /* Kolor dla aktywnej kropki */
+  }
+
+  .slider-items.active-slide-next {
+    transform: translateX(-100%);
+  }
+  
+  .slider-items.active-slide-prev {
+    transform: translateX(100%);
+  }
+  
+  .slider-items.active-slide-prev,
+  .slider-items.active-slide-next {
+    position: absolute;
+  }
