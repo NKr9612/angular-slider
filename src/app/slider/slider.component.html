@@ -1,7 +1,7 @@
 <div class="slider">
     <div class="slider-items" [style.transform]="'translateX(' + (-activeIndex * 100) + '%)'">
       <div *ngFor="let item of items; let i = index" 
-           [ngClass]="{'active': i === activeIndex, 'prev': i === prevIndex, 'next': i === nextIndex}" 
+           [ngClass]="{'active': i === activeIndex}" 
            (click)="setActive(i)">
         <!-- Tutaj używamy komponentu do wyświetlania danych -->
         <app-item [data]="item"></app-item>
